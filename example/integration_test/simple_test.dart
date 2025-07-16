@@ -1,6 +1,6 @@
 import 'package:integration_test/integration_test.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter_discord_rpc/flutter_discord_rpc.dart';
+import 'package:flutter_discord_rpc_fork/flutter_discord_rpc.dart';
 
 void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();

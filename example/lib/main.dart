@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 
-import 'package:flutter_discord_rpc/flutter_discord_rpc.dart';
+import 'package:flutter_discord_rpc_fork/flutter_discord_rpc.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'package:flutter_discord_rpc/src/rust/frb_generated.dart';
+import 'package:flutter_discord_rpc_fork/src/rust/frb_generated.dart';
 
 import 'rust/api/types.dart';
 import 'rust/api/api.dart' as api;
