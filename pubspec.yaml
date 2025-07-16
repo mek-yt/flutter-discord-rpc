@@ -1,0 +1,43 @@
+name: flutter_discord_rpc
+description: Discord RPC support for Flutter desktop platforms
+version: 1.0.1
+repository: https://github.com/Schnitzel5/flutter-discord-rpc
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: ">=3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  ffi: ^2.1.2
+  flutter_rust_bridge: 2.5.0
+  plugin_platform_interface: ^2.1.8
+  uuid: ^4.4.2
+  meta: ^1.11.0
+  collection: ^1.18.0
+
+dev_dependencies:
+  ffigen: ^14.0.1
+  lints: ^2.0.0
+  test: ^1.21.0
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  integration_test:
+    sdk: flutter
+
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        ffiPlugin: true
+      ios:
+        ffiPlugin: true
+      linux:
+        ffiPlugin: true
+      macos:
+        ffiPlugin: true
+      windows:
+        ffiPlugin: true
