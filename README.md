@@ -1,4 +1,4 @@
-# flutter_discord_rpc
+# flutter_discord_rpc_fork
 
 Forked from [KRTirtho/frb_plugins](https://github.com/KRTirtho/frb_plugins/tree/main/packages/flutter_discord_rpc).
 
@@ -9,7 +9,7 @@ Discord RPC support for Flutter desktop platforms through IPC.
 Run the following:
 
 ```shell
-> flutter pub add flutter_discord_rpc
+> flutter pub add flutter_discord_rpc_fork
 ```
 
 ## Requirements
