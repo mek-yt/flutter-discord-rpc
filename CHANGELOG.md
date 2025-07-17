@@ -1,3 +1,7 @@
+## 1.0.3
+
+ - **FIX**(flutter_discord_rpc): fixed dynamic library bug
+
 ## 1.0.2
 
  - Updated README
