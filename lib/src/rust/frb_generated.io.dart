@@ -130,8 +130,7 @@ abstract class RustLibApiImplPlatform extends BaseApiImpl<RustLibWire> {
 
   @protected
   ActivityType sse_decode_box_autoadd_activity_type(
-    SseDeserializer deserializer,
-  );
+      SseDeserializer deserializer);
 
   @protected
   PlatformInt64 sse_decode_box_autoadd_i_64(SseDeserializer deserializer);
@@ -150,8 +149,7 @@ abstract class RustLibApiImplPlatform extends BaseApiImpl<RustLibWire> {
 
   @protected
   RPCTimestamps sse_decode_box_autoadd_rpc_timestamps(
-    SseDeserializer deserializer,
-  );
+      SseDeserializer deserializer);
 
   @protected
   int sse_decode_i_32(SseDeserializer deserializer);
@@ -176,29 +174,25 @@ abstract class RustLibApiImplPlatform extends BaseApiImpl<RustLibWire> {
 
   @protected
   ActivityType? sse_decode_opt_box_autoadd_activity_type(
-    SseDeserializer deserializer,
-  );
+      SseDeserializer deserializer);
 
   @protected
   PlatformInt64? sse_decode_opt_box_autoadd_i_64(SseDeserializer deserializer);
 
   @protected
   RPCAssets? sse_decode_opt_box_autoadd_rpc_assets(
-    SseDeserializer deserializer,
-  );
+      SseDeserializer deserializer);
 
   @protected
   RPCParty? sse_decode_opt_box_autoadd_rpc_party(SseDeserializer deserializer);
 
   @protected
   RPCSecrets? sse_decode_opt_box_autoadd_rpc_secrets(
-    SseDeserializer deserializer,
-  );
+      SseDeserializer deserializer);
 
   @protected
   RPCTimestamps? sse_decode_opt_box_autoadd_rpc_timestamps(
-    SseDeserializer deserializer,
-  );
+      SseDeserializer deserializer);
 
   @protected
   I32Array2? sse_decode_opt_i_32_array_2(SseDeserializer deserializer);
@@ -235,9 +229,7 @@ abstract class RustLibApiImplPlatform extends BaseApiImpl<RustLibWire> {
 
   @protected
   void sse_encode_AnyhowException(
-    AnyhowException self,
-    SseSerializer serializer,
-  );
+      AnyhowException self, SseSerializer serializer);
 
   @protected
   void sse_encode_String(String self, SseSerializer serializer);
@@ -247,45 +239,31 @@ abstract class RustLibApiImplPlatform extends BaseApiImpl<RustLibWire> {
 
   @protected
   void sse_encode_box_autoadd_activity_type(
-    ActivityType self,
-    SseSerializer serializer,
-  );
+      ActivityType self, SseSerializer serializer);
 
   @protected
   void sse_encode_box_autoadd_i_64(
-    PlatformInt64 self,
-    SseSerializer serializer,
-  );
+      PlatformInt64 self, SseSerializer serializer);
 
   @protected
   void sse_encode_box_autoadd_rpc_activity(
-    RPCActivity self,
-    SseSerializer serializer,
-  );
+      RPCActivity self, SseSerializer serializer);
 
   @protected
   void sse_encode_box_autoadd_rpc_assets(
-    RPCAssets self,
-    SseSerializer serializer,
-  );
+      RPCAssets self, SseSerializer serializer);
 
   @protected
   void sse_encode_box_autoadd_rpc_party(
-    RPCParty self,
-    SseSerializer serializer,
-  );
+      RPCParty self, SseSerializer serializer);
 
   @protected
   void sse_encode_box_autoadd_rpc_secrets(
-    RPCSecrets self,
-    SseSerializer serializer,
-  );
+      RPCSecrets self, SseSerializer serializer);
 
   @protected
   void sse_encode_box_autoadd_rpc_timestamps(
-    RPCTimestamps self,
-    SseSerializer serializer,
-  );
+      RPCTimestamps self, SseSerializer serializer);
 
   @protected
   void sse_encode_i_32(int self, SseSerializer serializer);
@@ -298,69 +276,49 @@ abstract class RustLibApiImplPlatform extends BaseApiImpl<RustLibWire> {
 
   @protected
   void sse_encode_list_prim_i_32_strict(
-    Int32List self,
-    SseSerializer serializer,
-  );
+      Int32List self, SseSerializer serializer);
 
   @protected
   void sse_encode_list_prim_u_8_strict(
-    Uint8List self,
-    SseSerializer serializer,
-  );
+      Uint8List self, SseSerializer serializer);
 
   @protected
   void sse_encode_list_rpc_button(
-    List<RPCButton> self,
-    SseSerializer serializer,
-  );
+      List<RPCButton> self, SseSerializer serializer);
 
   @protected
   void sse_encode_opt_String(String? self, SseSerializer serializer);
 
   @protected
   void sse_encode_opt_box_autoadd_activity_type(
-    ActivityType? self,
-    SseSerializer serializer,
-  );
+      ActivityType? self, SseSerializer serializer);
 
   @protected
   void sse_encode_opt_box_autoadd_i_64(
-    PlatformInt64? self,
-    SseSerializer serializer,
-  );
+      PlatformInt64? self, SseSerializer serializer);
 
   @protected
   void sse_encode_opt_box_autoadd_rpc_assets(
-    RPCAssets? self,
-    SseSerializer serializer,
-  );
+      RPCAssets? self, SseSerializer serializer);
 
   @protected
   void sse_encode_opt_box_autoadd_rpc_party(
-    RPCParty? self,
-    SseSerializer serializer,
-  );
+      RPCParty? self, SseSerializer serializer);
 
   @protected
   void sse_encode_opt_box_autoadd_rpc_secrets(
-    RPCSecrets? self,
-    SseSerializer serializer,
-  );
+      RPCSecrets? self, SseSerializer serializer);
 
   @protected
   void sse_encode_opt_box_autoadd_rpc_timestamps(
-    RPCTimestamps? self,
-    SseSerializer serializer,
-  );
+      RPCTimestamps? self, SseSerializer serializer);
 
   @protected
   void sse_encode_opt_i_32_array_2(I32Array2? self, SseSerializer serializer);
 
   @protected
   void sse_encode_opt_list_rpc_button(
-    List<RPCButton>? self,
-    SseSerializer serializer,
-  );
+      List<RPCButton>? self, SseSerializer serializer);
 
   @protected
   void sse_encode_rpc_activity(RPCActivity self, SseSerializer serializer);
@@ -398,9 +356,9 @@ class RustLibWire implements BaseWire {
 
   /// Holds the symbol lookup function.
   final ffi.Pointer<T> Function<T extends ffi.NativeType>(String symbolName)
-  _lookup;
+      _lookup;
 
   /// The symbols are looked up in [dynamicLibrary].
   RustLibWire(ffi.DynamicLibrary dynamicLibrary)
-    : _lookup = dynamicLibrary.lookup;
+      : _lookup = dynamicLibrary.lookup;
 }

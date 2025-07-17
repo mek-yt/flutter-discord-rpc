@@ -35,8 +35,12 @@ class RustLib extends BaseEntrypoint<RustLibApi, RustLibApiImpl, RustLibWire> {
 
   /// Initialize flutter_rust_bridge in mock mode.
   /// No libraries for FFI are loaded.
-  static void initMock({required RustLibApi api}) {
-    instance.initMockImpl(api: api);
+  static void initMock({
+    required RustLibApi api,
+  }) {
+    instance.initMockImpl(
+      api: api,
+    );
   }
 
   /// Dispose flutter_rust_bridge
@@ -70,10 +74,10 @@ class RustLib extends BaseEntrypoint<RustLibApi, RustLibApiImpl, RustLibWire> {
 
   static const kDefaultExternalLibraryLoaderConfig =
       ExternalLibraryLoaderConfig(
-        stem: 'flutter_discord_rpc',
-        ioDirectory: 'rust/target/release/',
-        webPrefix: 'pkg/',
-      );
+    stem: 'flutter_discord_rpc_fork',
+    ioDirectory: 'rust/target/release/',
+    webPrefix: 'pkg/',
+  );
 }
 
 abstract class RustLibApi extends BaseApi {
@@ -104,190 +108,162 @@ class RustLibApiImpl extends RustLibApiImplPlatform implements RustLibApi {
 
   @override
   Future<void> crateApiApiDiscordClearActivity() {
-    return handler.executeNormal(
-      NormalTask(
-        callFfi: (port_) {
-          final serializer = SseSerializer(generalizedFrbRustBinding);
-          pdeCallFfi(
-            generalizedFrbRustBinding,
-            serializer,
-            funcId: 1,
-            port: port_,
-          );
-        },
-        codec: SseCodec(
-          decodeSuccessData: sse_decode_unit,
-          decodeErrorData: sse_decode_AnyhowException,
-        ),
-        constMeta: kCrateApiApiDiscordClearActivityConstMeta,
-        argValues: [],
-        apiImpl: this,
+    return handler.executeNormal(NormalTask(
+      callFfi: (port_) {
+        final serializer = SseSerializer(generalizedFrbRustBinding);
+        pdeCallFfi(generalizedFrbRustBinding, serializer,
+            funcId: 1, port: port_);
+      },
+      codec: SseCodec(
+        decodeSuccessData: sse_decode_unit,
+        decodeErrorData: sse_decode_AnyhowException,
       ),
-    );
+      constMeta: kCrateApiApiDiscordClearActivityConstMeta,
+      argValues: [],
+      apiImpl: this,
+    ));
   }
 
   TaskConstMeta get kCrateApiApiDiscordClearActivityConstMeta =>
-      const TaskConstMeta(debugName: "discord_clear_activity", argNames: []);
+      const TaskConstMeta(
+        debugName: "discord_clear_activity",
+        argNames: [],
+      );
 
   @override
   Future<void> crateApiApiDiscordClose() {
-    return handler.executeNormal(
-      NormalTask(
-        callFfi: (port_) {
-          final serializer = SseSerializer(generalizedFrbRustBinding);
-          pdeCallFfi(
-            generalizedFrbRustBinding,
-            serializer,
-            funcId: 2,
-            port: port_,
-          );
-        },
-        codec: SseCodec(
-          decodeSuccessData: sse_decode_unit,
-          decodeErrorData: sse_decode_AnyhowException,
-        ),
-        constMeta: kCrateApiApiDiscordCloseConstMeta,
-        argValues: [],
-        apiImpl: this,
+    return handler.executeNormal(NormalTask(
+      callFfi: (port_) {
+        final serializer = SseSerializer(generalizedFrbRustBinding);
+        pdeCallFfi(generalizedFrbRustBinding, serializer,
+            funcId: 2, port: port_);
+      },
+      codec: SseCodec(
+        decodeSuccessData: sse_decode_unit,
+        decodeErrorData: sse_decode_AnyhowException,
       ),
-    );
+      constMeta: kCrateApiApiDiscordCloseConstMeta,
+      argValues: [],
+      apiImpl: this,
+    ));
   }
 
-  TaskConstMeta get kCrateApiApiDiscordCloseConstMeta =>
-      const TaskConstMeta(debugName: "discord_close", argNames: []);
+  TaskConstMeta get kCrateApiApiDiscordCloseConstMeta => const TaskConstMeta(
+        debugName: "discord_close",
+        argNames: [],
+      );
 
   @override
   Future<void> crateApiApiDiscordConnect() {
-    return handler.executeNormal(
-      NormalTask(
-        callFfi: (port_) {
-          final serializer = SseSerializer(generalizedFrbRustBinding);
-          pdeCallFfi(
-            generalizedFrbRustBinding,
-            serializer,
-            funcId: 3,
-            port: port_,
-          );
-        },
-        codec: SseCodec(
-          decodeSuccessData: sse_decode_unit,
-          decodeErrorData: sse_decode_AnyhowException,
-        ),
-        constMeta: kCrateApiApiDiscordConnectConstMeta,
-        argValues: [],
-        apiImpl: this,
+    return handler.executeNormal(NormalTask(
+      callFfi: (port_) {
+        final serializer = SseSerializer(generalizedFrbRustBinding);
+        pdeCallFfi(generalizedFrbRustBinding, serializer,
+            funcId: 3, port: port_);
+      },
+      codec: SseCodec(
+        decodeSuccessData: sse_decode_unit,
+        decodeErrorData: sse_decode_AnyhowException,
       ),
-    );
+      constMeta: kCrateApiApiDiscordConnectConstMeta,
+      argValues: [],
+      apiImpl: this,
+    ));
   }
 
-  TaskConstMeta get kCrateApiApiDiscordConnectConstMeta =>
-      const TaskConstMeta(debugName: "discord_connect", argNames: []);
+  TaskConstMeta get kCrateApiApiDiscordConnectConstMeta => const TaskConstMeta(
+        debugName: "discord_connect",
+        argNames: [],
+      );
 
   @override
   Future<void> crateApiApiDiscordDispose() {
-    return handler.executeNormal(
-      NormalTask(
-        callFfi: (port_) {
-          final serializer = SseSerializer(generalizedFrbRustBinding);
-          pdeCallFfi(
-            generalizedFrbRustBinding,
-            serializer,
-            funcId: 4,
-            port: port_,
-          );
-        },
-        codec: SseCodec(
-          decodeSuccessData: sse_decode_unit,
-          decodeErrorData: sse_decode_AnyhowException,
-        ),
-        constMeta: kCrateApiApiDiscordDisposeConstMeta,
-        argValues: [],
-        apiImpl: this,
+    return handler.executeNormal(NormalTask(
+      callFfi: (port_) {
+        final serializer = SseSerializer(generalizedFrbRustBinding);
+        pdeCallFfi(generalizedFrbRustBinding, serializer,
+            funcId: 4, port: port_);
+      },
+      codec: SseCodec(
+        decodeSuccessData: sse_decode_unit,
+        decodeErrorData: sse_decode_AnyhowException,
       ),
-    );
+      constMeta: kCrateApiApiDiscordDisposeConstMeta,
+      argValues: [],
+      apiImpl: this,
+    ));
   }
 
-  TaskConstMeta get kCrateApiApiDiscordDisposeConstMeta =>
-      const TaskConstMeta(debugName: "discord_dispose", argNames: []);
+  TaskConstMeta get kCrateApiApiDiscordDisposeConstMeta => const TaskConstMeta(
+        debugName: "discord_dispose",
+        argNames: [],
+      );
 
   @override
   Future<void> crateApiApiDiscordInit({required String clientId}) {
-    return handler.executeNormal(
-      NormalTask(
-        callFfi: (port_) {
-          final serializer = SseSerializer(generalizedFrbRustBinding);
-          sse_encode_String(clientId, serializer);
-          pdeCallFfi(
-            generalizedFrbRustBinding,
-            serializer,
-            funcId: 5,
-            port: port_,
-          );
-        },
-        codec: SseCodec(
-          decodeSuccessData: sse_decode_unit,
-          decodeErrorData: sse_decode_AnyhowException,
-        ),
-        constMeta: kCrateApiApiDiscordInitConstMeta,
-        argValues: [clientId],
-        apiImpl: this,
+    return handler.executeNormal(NormalTask(
+      callFfi: (port_) {
+        final serializer = SseSerializer(generalizedFrbRustBinding);
+        sse_encode_String(clientId, serializer);
+        pdeCallFfi(generalizedFrbRustBinding, serializer,
+            funcId: 5, port: port_);
+      },
+      codec: SseCodec(
+        decodeSuccessData: sse_decode_unit,
+        decodeErrorData: sse_decode_AnyhowException,
       ),
-    );
+      constMeta: kCrateApiApiDiscordInitConstMeta,
+      argValues: [clientId],
+      apiImpl: this,
+    ));
   }
 
-  TaskConstMeta get kCrateApiApiDiscordInitConstMeta =>
-      const TaskConstMeta(debugName: "discord_init", argNames: ["clientId"]);
+  TaskConstMeta get kCrateApiApiDiscordInitConstMeta => const TaskConstMeta(
+        debugName: "discord_init",
+        argNames: ["clientId"],
+      );
 
   @override
   Future<void> crateApiApiDiscordReconnect() {
-    return handler.executeNormal(
-      NormalTask(
-        callFfi: (port_) {
-          final serializer = SseSerializer(generalizedFrbRustBinding);
-          pdeCallFfi(
-            generalizedFrbRustBinding,
-            serializer,
-            funcId: 6,
-            port: port_,
-          );
-        },
-        codec: SseCodec(
-          decodeSuccessData: sse_decode_unit,
-          decodeErrorData: sse_decode_AnyhowException,
-        ),
-        constMeta: kCrateApiApiDiscordReconnectConstMeta,
-        argValues: [],
-        apiImpl: this,
+    return handler.executeNormal(NormalTask(
+      callFfi: (port_) {
+        final serializer = SseSerializer(generalizedFrbRustBinding);
+        pdeCallFfi(generalizedFrbRustBinding, serializer,
+            funcId: 6, port: port_);
+      },
+      codec: SseCodec(
+        decodeSuccessData: sse_decode_unit,
+        decodeErrorData: sse_decode_AnyhowException,
       ),
-    );
+      constMeta: kCrateApiApiDiscordReconnectConstMeta,
+      argValues: [],
+      apiImpl: this,
+    ));
   }
 
   TaskConstMeta get kCrateApiApiDiscordReconnectConstMeta =>
-      const TaskConstMeta(debugName: "discord_reconnect", argNames: []);
+      const TaskConstMeta(
+        debugName: "discord_reconnect",
+        argNames: [],
+      );
 
   @override
   Future<void> crateApiApiDiscordSetActivity({required RPCActivity activity}) {
-    return handler.executeNormal(
-      NormalTask(
-        callFfi: (port_) {
-          final serializer = SseSerializer(generalizedFrbRustBinding);
-          sse_encode_box_autoadd_rpc_activity(activity, serializer);
-          pdeCallFfi(
-            generalizedFrbRustBinding,
-            serializer,
-            funcId: 7,
-            port: port_,
-          );
-        },
-        codec: SseCodec(
-          decodeSuccessData: sse_decode_unit,
-          decodeErrorData: sse_decode_AnyhowException,
-        ),
-        constMeta: kCrateApiApiDiscordSetActivityConstMeta,
-        argValues: [activity],
-        apiImpl: this,
+    return handler.executeNormal(NormalTask(
+      callFfi: (port_) {
+        final serializer = SseSerializer(generalizedFrbRustBinding);
+        sse_encode_box_autoadd_rpc_activity(activity, serializer);
+        pdeCallFfi(generalizedFrbRustBinding, serializer,
+            funcId: 7, port: port_);
+      },
+      codec: SseCodec(
+        decodeSuccessData: sse_decode_unit,
+        decodeErrorData: sse_decode_AnyhowException,
       ),
-    );
+      constMeta: kCrateApiApiDiscordSetActivityConstMeta,
+      argValues: [activity],
+      apiImpl: this,
+    ));
   }
 
   TaskConstMeta get kCrateApiApiDiscordSetActivityConstMeta =>
@@ -298,30 +274,26 @@ class RustLibApiImpl extends RustLibApiImplPlatform implements RustLibApi {
 
   @override
   Future<void> crateApiApiInitApp() {
-    return handler.executeNormal(
-      NormalTask(
-        callFfi: (port_) {
-          final serializer = SseSerializer(generalizedFrbRustBinding);
-          pdeCallFfi(
-            generalizedFrbRustBinding,
-            serializer,
-            funcId: 8,
-            port: port_,
-          );
-        },
-        codec: SseCodec(
-          decodeSuccessData: sse_decode_unit,
-          decodeErrorData: null,
-        ),
-        constMeta: kCrateApiApiInitAppConstMeta,
-        argValues: [],
-        apiImpl: this,
+    return handler.executeNormal(NormalTask(
+      callFfi: (port_) {
+        final serializer = SseSerializer(generalizedFrbRustBinding);
+        pdeCallFfi(generalizedFrbRustBinding, serializer,
+            funcId: 8, port: port_);
+      },
+      codec: SseCodec(
+        decodeSuccessData: sse_decode_unit,
+        decodeErrorData: null,
       ),
-    );
+      constMeta: kCrateApiApiInitAppConstMeta,
+      argValues: [],
+      apiImpl: this,
+    ));
   }
 
-  TaskConstMeta get kCrateApiApiInitAppConstMeta =>
-      const TaskConstMeta(debugName: "init_app", argNames: []);
+  TaskConstMeta get kCrateApiApiInitAppConstMeta => const TaskConstMeta(
+        debugName: "init_app",
+        argNames: [],
+      );
 
   @protected
   AnyhowException dco_decode_AnyhowException(dynamic raw) {
@@ -589,8 +561,7 @@ class RustLibApiImpl extends RustLibApiImplPlatform implements RustLibApi {
 
   @protected
   ActivityType sse_decode_box_autoadd_activity_type(
-    SseDeserializer deserializer,
-  ) {
+      SseDeserializer deserializer) {
     // Codec=Sse (Serialization based), see doc to use other codecs
     return (sse_decode_activity_type(deserializer));
   }
@@ -603,8 +574,7 @@ class RustLibApiImpl extends RustLibApiImplPlatform implements RustLibApi {
 
   @protected
   RPCActivity sse_decode_box_autoadd_rpc_activity(
-    SseDeserializer deserializer,
-  ) {
+      SseDeserializer deserializer) {
     // Codec=Sse (Serialization based), see doc to use other codecs
     return (sse_decode_rpc_activity(deserializer));
   }
@@ -629,8 +599,7 @@ class RustLibApiImpl extends RustLibApiImplPlatform implements RustLibApi {
 
   @protected
   RPCTimestamps sse_decode_box_autoadd_rpc_timestamps(
-    SseDeserializer deserializer,
-  ) {
+      SseDeserializer deserializer) {
     // Codec=Sse (Serialization based), see doc to use other codecs
     return (sse_decode_rpc_timestamps(deserializer));
   }
@@ -693,8 +662,7 @@ class RustLibApiImpl extends RustLibApiImplPlatform implements RustLibApi {
 
   @protected
   ActivityType? sse_decode_opt_box_autoadd_activity_type(
-    SseDeserializer deserializer,
-  ) {
+      SseDeserializer deserializer) {
     // Codec=Sse (Serialization based), see doc to use other codecs
 
     if (sse_decode_bool(deserializer)) {
@@ -717,8 +685,7 @@ class RustLibApiImpl extends RustLibApiImplPlatform implements RustLibApi {
 
   @protected
   RPCAssets? sse_decode_opt_box_autoadd_rpc_assets(
-    SseDeserializer deserializer,
-  ) {
+      SseDeserializer deserializer) {
     // Codec=Sse (Serialization based), see doc to use other codecs
 
     if (sse_decode_bool(deserializer)) {
@@ -741,8 +708,7 @@ class RustLibApiImpl extends RustLibApiImplPlatform implements RustLibApi {
 
   @protected
   RPCSecrets? sse_decode_opt_box_autoadd_rpc_secrets(
-    SseDeserializer deserializer,
-  ) {
+      SseDeserializer deserializer) {
     // Codec=Sse (Serialization based), see doc to use other codecs
 
     if (sse_decode_bool(deserializer)) {
@@ -754,8 +720,7 @@ class RustLibApiImpl extends RustLibApiImplPlatform implements RustLibApi {
 
   @protected
   RPCTimestamps? sse_decode_opt_box_autoadd_rpc_timestamps(
-    SseDeserializer deserializer,
-  ) {
+      SseDeserializer deserializer) {
     // Codec=Sse (Serialization based), see doc to use other codecs
 
     if (sse_decode_bool(deserializer)) {
@@ -778,8 +743,7 @@ class RustLibApiImpl extends RustLibApiImplPlatform implements RustLibApi {
 
   @protected
   List<RPCButton>? sse_decode_opt_list_rpc_button(
-    SseDeserializer deserializer,
-  ) {
+      SseDeserializer deserializer) {
     // Codec=Sse (Serialization based), see doc to use other codecs
 
     if (sse_decode_bool(deserializer)) {
@@ -794,26 +758,23 @@ class RustLibApiImpl extends RustLibApiImplPlatform implements RustLibApi {
     // Codec=Sse (Serialization based), see doc to use other codecs
     var var_state = sse_decode_opt_String(deserializer);
     var var_details = sse_decode_opt_String(deserializer);
-    var var_timestamps = sse_decode_opt_box_autoadd_rpc_timestamps(
-      deserializer,
-    );
+    var var_timestamps =
+        sse_decode_opt_box_autoadd_rpc_timestamps(deserializer);
     var var_party = sse_decode_opt_box_autoadd_rpc_party(deserializer);
     var var_assets = sse_decode_opt_box_autoadd_rpc_assets(deserializer);
     var var_secrets = sse_decode_opt_box_autoadd_rpc_secrets(deserializer);
     var var_buttons = sse_decode_opt_list_rpc_button(deserializer);
-    var var_activityType = sse_decode_opt_box_autoadd_activity_type(
-      deserializer,
-    );
+    var var_activityType =
+        sse_decode_opt_box_autoadd_activity_type(deserializer);
     return RPCActivity(
-      state: var_state,
-      details: var_details,
-      timestamps: var_timestamps,
-      party: var_party,
-      assets: var_assets,
-      secrets: var_secrets,
-      buttons: var_buttons,
-      activityType: var_activityType,
-    );
+        state: var_state,
+        details: var_details,
+        timestamps: var_timestamps,
+        party: var_party,
+        assets: var_assets,
+        secrets: var_secrets,
+        buttons: var_buttons,
+        activityType: var_activityType);
   }
 
   @protected
@@ -824,11 +785,10 @@ class RustLibApiImpl extends RustLibApiImplPlatform implements RustLibApi {
     var var_smallImage = sse_decode_opt_String(deserializer);
     var var_smallText = sse_decode_opt_String(deserializer);
     return RPCAssets(
-      largeImage: var_largeImage,
-      largeText: var_largeText,
-      smallImage: var_smallImage,
-      smallText: var_smallText,
-    );
+        largeImage: var_largeImage,
+        largeText: var_largeText,
+        smallImage: var_smallImage,
+        smallText: var_smallText);
   }
 
   @protected
@@ -854,10 +814,7 @@ class RustLibApiImpl extends RustLibApiImplPlatform implements RustLibApi {
     var var_spectate = sse_decode_opt_String(deserializer);
     var var_matchStr = sse_decode_opt_String(deserializer);
     return RPCSecrets(
-      join: var_join,
-      spectate: var_spectate,
-      matchStr: var_matchStr,
-    );
+        join: var_join, spectate: var_spectate, matchStr: var_matchStr);
   }
 
   @protected
@@ -887,9 +844,7 @@ class RustLibApiImpl extends RustLibApiImplPlatform implements RustLibApi {
 
   @protected
   void sse_encode_AnyhowException(
-    AnyhowException self,
-    SseSerializer serializer,
-  ) {
+      AnyhowException self, SseSerializer serializer) {
     // Codec=Sse (Serialization based), see doc to use other codecs
     sse_encode_String(self.message, serializer);
   }
@@ -908,63 +863,49 @@ class RustLibApiImpl extends RustLibApiImplPlatform implements RustLibApi {
 
   @protected
   void sse_encode_box_autoadd_activity_type(
-    ActivityType self,
-    SseSerializer serializer,
-  ) {
+      ActivityType self, SseSerializer serializer) {
     // Codec=Sse (Serialization based), see doc to use other codecs
     sse_encode_activity_type(self, serializer);
   }
 
   @protected
   void sse_encode_box_autoadd_i_64(
-    PlatformInt64 self,
-    SseSerializer serializer,
-  ) {
+      PlatformInt64 self, SseSerializer serializer) {
     // Codec=Sse (Serialization based), see doc to use other codecs
     sse_encode_i_64(self, serializer);
   }
 
   @protected
   void sse_encode_box_autoadd_rpc_activity(
-    RPCActivity self,
-    SseSerializer serializer,
-  ) {
+      RPCActivity self, SseSerializer serializer) {
     // Codec=Sse (Serialization based), see doc to use other codecs
     sse_encode_rpc_activity(self, serializer);
   }
 
   @protected
   void sse_encode_box_autoadd_rpc_assets(
-    RPCAssets self,
-    SseSerializer serializer,
-  ) {
+      RPCAssets self, SseSerializer serializer) {
     // Codec=Sse (Serialization based), see doc to use other codecs
     sse_encode_rpc_assets(self, serializer);
   }
 
   @protected
   void sse_encode_box_autoadd_rpc_party(
-    RPCParty self,
-    SseSerializer serializer,
-  ) {
+      RPCParty self, SseSerializer serializer) {
     // Codec=Sse (Serialization based), see doc to use other codecs
     sse_encode_rpc_party(self, serializer);
   }
 
   @protected
   void sse_encode_box_autoadd_rpc_secrets(
-    RPCSecrets self,
-    SseSerializer serializer,
-  ) {
+      RPCSecrets self, SseSerializer serializer) {
     // Codec=Sse (Serialization based), see doc to use other codecs
     sse_encode_rpc_secrets(self, serializer);
   }
 
   @protected
   void sse_encode_box_autoadd_rpc_timestamps(
-    RPCTimestamps self,
-    SseSerializer serializer,
-  ) {
+      RPCTimestamps self, SseSerializer serializer) {
     // Codec=Sse (Serialization based), see doc to use other codecs
     sse_encode_rpc_timestamps(self, serializer);
   }
@@ -989,9 +930,7 @@ class RustLibApiImpl extends RustLibApiImplPlatform implements RustLibApi {
 
   @protected
   void sse_encode_list_prim_i_32_strict(
-    Int32List self,
-    SseSerializer serializer,
-  ) {
+      Int32List self, SseSerializer serializer) {
     // Codec=Sse (Serialization based), see doc to use other codecs
     sse_encode_i_32(self.length, serializer);
     serializer.buffer.putInt32List(self);
@@ -999,9 +938,7 @@ class RustLibApiImpl extends RustLibApiImplPlatform implements RustLibApi {
 
   @protected
   void sse_encode_list_prim_u_8_strict(
-    Uint8List self,
-    SseSerializer serializer,
-  ) {
+      Uint8List self, SseSerializer serializer) {
     // Codec=Sse (Serialization based), see doc to use other codecs
     sse_encode_i_32(self.length, serializer);
     serializer.buffer.putUint8List(self);
@@ -1009,9 +946,7 @@ class RustLibApiImpl extends RustLibApiImplPlatform implements RustLibApi {
 
   @protected
   void sse_encode_list_rpc_button(
-    List<RPCButton> self,
-    SseSerializer serializer,
-  ) {
+      List<RPCButton> self, SseSerializer serializer) {
     // Codec=Sse (Serialization based), see doc to use other codecs
     sse_encode_i_32(self.length, serializer);
     for (final item in self) {
@@ -1031,9 +966,7 @@ class RustLibApiImpl extends RustLibApiImplPlatform implements RustLibApi {
 
   @protected
   void sse_encode_opt_box_autoadd_activity_type(
-    ActivityType? self,
-    SseSerializer serializer,
-  ) {
+      ActivityType? self, SseSerializer serializer) {
     // Codec=Sse (Serialization based), see doc to use other codecs
 
     sse_encode_bool(self != null, serializer);
@@ -1044,9 +977,7 @@ class RustLibApiImpl extends RustLibApiImplPlatform implements RustLibApi {
 
   @protected
   void sse_encode_opt_box_autoadd_i_64(
-    PlatformInt64? self,
-    SseSerializer serializer,
-  ) {
+      PlatformInt64? self, SseSerializer serializer) {
     // Codec=Sse (Serialization based), see doc to use other codecs
 
     sse_encode_bool(self != null, serializer);
@@ -1057,9 +988,7 @@ class RustLibApiImpl extends RustLibApiImplPlatform implements RustLibApi {
 
   @protected
   void sse_encode_opt_box_autoadd_rpc_assets(
-    RPCAssets? self,
-    SseSerializer serializer,
-  ) {
+      RPCAssets? self, SseSerializer serializer) {
     // Codec=Sse (Serialization based), see doc to use other codecs
 
     sse_encode_bool(self != null, serializer);
@@ -1070,9 +999,7 @@ class RustLibApiImpl extends RustLibApiImplPlatform implements RustLibApi {
 
   @protected
   void sse_encode_opt_box_autoadd_rpc_party(
-    RPCParty? self,
-    SseSerializer serializer,
-  ) {
+      RPCParty? self, SseSerializer serializer) {
     // Codec=Sse (Serialization based), see doc to use other codecs
 
     sse_encode_bool(self != null, serializer);
@@ -1083,9 +1010,7 @@ class RustLibApiImpl extends RustLibApiImplPlatform implements RustLibApi {
 
   @protected
   void sse_encode_opt_box_autoadd_rpc_secrets(
-    RPCSecrets? self,
-    SseSerializer serializer,
-  ) {
+      RPCSecrets? self, SseSerializer serializer) {
     // Codec=Sse (Serialization based), see doc to use other codecs
 
     sse_encode_bool(self != null, serializer);
@@ -1096,9 +1021,7 @@ class RustLibApiImpl extends RustLibApiImplPlatform implements RustLibApi {
 
   @protected
   void sse_encode_opt_box_autoadd_rpc_timestamps(
-    RPCTimestamps? self,
-    SseSerializer serializer,
-  ) {
+      RPCTimestamps? self, SseSerializer serializer) {
     // Codec=Sse (Serialization based), see doc to use other codecs
 
     sse_encode_bool(self != null, serializer);
@@ -1119,9 +1042,7 @@ class RustLibApiImpl extends RustLibApiImplPlatform implements RustLibApi {
 
   @protected
   void sse_encode_opt_list_rpc_button(
-    List<RPCButton>? self,
-    SseSerializer serializer,
-  ) {
+      List<RPCButton>? self, SseSerializer serializer) {
     // Codec=Sse (Serialization based), see doc to use other codecs
 
     sse_encode_bool(self != null, serializer);

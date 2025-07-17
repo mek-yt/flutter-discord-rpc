@@ -216,7 +216,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "flutter_discord_rpc"
+name = "flutter_discord_rpc_fork"
 version = "0.1.0"
 dependencies = [
  "anyhow",

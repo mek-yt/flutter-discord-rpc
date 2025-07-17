@@ -1,4 +1,4 @@
-#include "flutter_discord_rpc.h"
+#include "flutter_discord_rpc_fork.h"
 
 // A very short-lived native function.
 //

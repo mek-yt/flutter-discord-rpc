@@ -23,6 +23,7 @@ enum ActivityType {
 
   /// Activity type "Competing in X"
   competing,
+  ;
 }
 
 /// A struct representing a Discord rich presence activity
@@ -118,7 +119,10 @@ class RPCButton {
   final String label;
   final String url;
 
-  const RPCButton({required this.label, required this.url});
+  const RPCButton({
+    required this.label,
+    required this.url,
+  });
 
   @override
   int get hashCode => label.hashCode ^ url.hashCode;
@@ -139,7 +143,10 @@ class RPCParty {
   final String? id;
   final I32Array2? size;
 
-  const RPCParty({this.id, this.size});
+  const RPCParty({
+    this.id,
+    this.size,
+  });
 
   @override
   int get hashCode => id.hashCode ^ size.hashCode;
@@ -162,7 +169,11 @@ class RPCSecrets {
   final String? spectate;
   final String? matchStr;
 
-  const RPCSecrets({this.join, this.spectate, this.matchStr});
+  const RPCSecrets({
+    this.join,
+    this.spectate,
+    this.matchStr,
+  });
 
   @override
   int get hashCode => join.hashCode ^ spectate.hashCode ^ matchStr.hashCode;
@@ -184,7 +195,10 @@ class RPCTimestamps {
   final PlatformInt64? start;
   final PlatformInt64? end;
 
-  const RPCTimestamps({this.start, this.end});
+  const RPCTimestamps({
+    this.start,
+    this.end,
+  });
 
   @override
   int get hashCode => start.hashCode ^ end.hashCode;

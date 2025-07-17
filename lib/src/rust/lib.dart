@@ -14,7 +14,9 @@ class I32Array2 extends NonGrowableListView<int> {
   Int32List get inner => _inner;
   final Int32List _inner;
 
-  I32Array2(this._inner) : assert(_inner.length == arraySize), super(_inner);
+  I32Array2(this._inner)
+      : assert(_inner.length == arraySize),
+        super(_inner);
 
   I32Array2.init() : this(Int32List(arraySize));
 }

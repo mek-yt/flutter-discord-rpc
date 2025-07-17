@@ -1,4 +1,4 @@
-library flutter_discord_rpc;
+library;
 
 export 'src/flutter_discord_rpc_base.dart';
 export 'src/rust/api/types.dart'
