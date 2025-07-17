@@ -1,3 +1,7 @@
+## 1.0.4
+
+ - Renamed podspec files
+
 ## 1.0.3
 
  - **FIX**(flutter_discord_rpc): fixed dynamic library bug

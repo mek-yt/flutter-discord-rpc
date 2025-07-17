@@ -1,6 +1,6 @@
 name: flutter_discord_rpc_fork
 description: Discord RPC support for Flutter desktop platforms
-version: 1.0.3
+version: 1.0.4
 repository: https://github.com/Schnitzel5/flutter-discord-rpc
 
 environment:
