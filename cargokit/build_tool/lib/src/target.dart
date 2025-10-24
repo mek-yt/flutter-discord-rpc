@@ -47,11 +47,11 @@ class Target {
       flutter: 'windows-x64',
     ),
     Target(
-      rust: 'x86_64-unknown-linux-gnu',
+      rust: 'x86_64-unknown-linux-musl',
       flutter: 'linux-x64',
     ),
     Target(
-      rust: 'aarch64-unknown-linux-gnu',
+      rust: 'aarch64-unknown-linux-musl',
       flutter: 'linux-arm64',
     ),
     Target(
@@ -111,9 +111,9 @@ class Target {
       // the host target.
       final arch = runCommand('arch', []).stdout as String;
       if (arch.trim() == 'aarch64') {
-        return [Target.forRustTriple('aarch64-unknown-linux-gnu')!];
+        return [Target.forRustTriple('aarch64-unknown-linux-musl')!];
       } else {
-        return [Target.forRustTriple('x86_64-unknown-linux-gnu')!];
+        return [Target.forRustTriple('x86_64-unknown-linux-musl')!];
       }
     }
     return all.where((target) {
